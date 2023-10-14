@@ -8,7 +8,6 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
 
-
 # Load the environment variables from the .env file(as default)
 load_dotenv()
 
