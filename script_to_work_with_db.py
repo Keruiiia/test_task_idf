@@ -29,15 +29,16 @@ for sql_file in sql_files:
         df = pd.DataFrame(result.fetchall(), columns=result.keys())
 
     # Save the DataFrame to a CSV file
-    df.to_csv(os.path.join('results', f'{sql_file}.csv'), index=False)
+    df.to_csv(os.path.join('results', f'result_{sql_file[:-4]}.csv'), index=False)
 
     # If this is the 7th request, build a chart
     if sql_file == 'query_7.sql':
         print('Creating chart')
 
-        df['growth_rate'] = df.groupby('product')['sales'].pct_change(fill_method='bfill')
-        plt.figure(figsize=(10, 6))
+        df['growth_rate'] = df.groupby('product')['sales'].pct_change() * 100
+        plt.figure(figsize=(15, 10))
         sns.lineplot(data=df, x='month', y='sales', hue='product')
         plt.title('Monthly Sales Trend for Each Product in 2020')
+        plt.legend(loc='upper right')
         plt.savefig(os.path.join('results', 'monthly_sales_report.png'))
 

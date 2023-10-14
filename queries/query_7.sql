@@ -1,5 +1,5 @@
 SELECT
-    date.month_name AS month,
+    date.cy_date AS month,
     transactions.product_code as product,
     SUM(transactions.sales_qty * transactions.sales_amount) as sales
 FROM
@@ -8,6 +8,6 @@ FROM
 WHERE
     date.year = 2020
 GROUP BY
-    date.month_name, transactions.product_code
+    date.cy_date, transactions.product_code
 ORDER BY
     month;
