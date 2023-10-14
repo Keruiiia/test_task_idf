@@ -5,7 +5,7 @@ Then I created a report that shows the monthly sales trend for each product in 2
 months). After that I built graphs for each group of products grouped by sales. 
 Since there were 197 unique products in the table, it was decided to make a graph for every 10 products for clarity.
 
-![img.png](img.png)
+<img src="https://github.com/Keruiiia/test_task_idf/blob/dca9a1c34eab747ee1ee43a94a760a47885c2aa8/img.png" width=20% height=20%>
 
 For convenience, the project was built using docker compose.
 
