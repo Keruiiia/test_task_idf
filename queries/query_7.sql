@@ -1,12 +1,13 @@
-SELECT 
-    DATE_FORMAT(t.order_date, '%Y-%m') AS month,
-    t.product_code AS product,
-    SUM(t.sales_qty * t.sales_amount) AS sales
-FROM 
-    transactions t
-WHERE 
-    YEAR(t.order_date) = 2020
-GROUP BY 
-    month, product
-ORDER BY 
-    month, sales DESC;
+SELECT
+    date.month_name AS month,
+    transactions.product_code as product,
+    SUM(transactions.sales_qty * transactions.sales_amount) as sales
+FROM
+    transactions
+    JOIN date ON transactions.order_date = date.date
+WHERE
+    date.year = 2020
+GROUP BY
+    date.month_name, transactions.product_code
+ORDER BY
+    month;
