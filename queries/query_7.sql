@@ -4,7 +4,7 @@ SELECT
     SUM(transactions.sales_qty * transactions.sales_amount) as sales
 FROM
     transactions
-    JOIN date ON transactions.order_date = date.date
+JOIN date ON transactions.order_date = date.date
 WHERE
     date.year = 2020
 GROUP BY

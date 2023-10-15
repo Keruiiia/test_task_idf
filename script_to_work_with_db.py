@@ -6,6 +6,7 @@ import matplotlib.ticker as mtick
 import os
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
+from math import ceil
 
 
 # Load the environment variables from the .env file(as default)
@@ -47,7 +48,7 @@ for sql_file in sql_files:
         count_products = df['product'].nunique()
 
         # Create charts of 10 products in each
-        for i in range(count_products // 10 + (count_products % 10 > 0)):
+        for i in range(ceil(count_products / 10)):
             print(f'ploting {i+1}st chart')
             # Select 10 products for this chart
             products = grouped_df[i * 10:(i + 1) * 10].index

@@ -1,8 +1,9 @@
 SELECT
-    customers.custmer_name, SUM(transactions.sales_qty) as total_quantity
+    customers.custmer_name,
+    SUM(transactions.sales_qty) as total_quantity
 FROM
     transactions
-    JOIN customers ON transactions.customer_code = customers.customer_code
+JOIN customers ON transactions.customer_code = customers.customer_code
 WHERE
     YEAR(transactions.order_date) = 2017
 GROUP BY
