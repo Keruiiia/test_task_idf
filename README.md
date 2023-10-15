@@ -21,7 +21,7 @@ For convenience, the project was built using docker compose.
 | [results/charts/](https://github.com/Keruiiia/test_task_idf/blob/b8f0c76f2b3dfa6b74f42c3c604293d67795a730/results/charts)                     | Folder with charts of report sales                                                      |
 | [.env](https://github.com/Keruiiia/test_task_idf/blob/b8f0c76f2b3dfa6b74f42c3c604293d67795a730/.env)                                          | It usually added to .gitignore but in this case it is visible for verification purposes |                                              |
 | [requirements.txt](https://github.com/Keruiiia/test_task_idf/blob/b8f0c76f2b3dfa6b74f42c3c604293d67795a730/requirements.txt)                  | File with the list of required libraries for project operation                          |
-| [script_to_work_with_db.py](https://github.com/Keruiiia/test_task_idf/blob/0a25008eea02da89a2d1da0377828c3da5778da6/script_to_work_with_db.py) | A Python script to execute SQL queries and generate a sales report.                                                                                        |
+| [script_to_work_with_db.py](https://github.com/Keruiiia/test_task_idf/blob/681d192f7a69096226f0e4274ff94a5ea71d9e47/script_to_work_with_db.py) | A Python script to execute SQL queries and generate a sales report.                                                                                        |
 ***
 ### The project is built using docker-compose, with the following commands:
 Create and start containers:
