@@ -51,8 +51,8 @@ for sql_file in sql_files:
         for i in range(ceil(count_products / 10)):
             print(f'ploting {i+1}st chart')
             # Select 10 products for this chart
-            products = grouped_df[i * 10:(i + 1) * 10].index
-            filtered_df = df[df['product'].isin(products)]
+            products = grouped_df[i * 10:(i + 1) * 10]
+            filtered_df = df[df['product'].isin(products.index)]
 
             plt.figure(figsize=(12, 6))
             sns.lineplot(data=filtered_df, x='month', y='sales', hue='product')
@@ -71,8 +71,8 @@ for sql_file in sql_files:
             ax.yaxis.set_major_formatter(tick)
 
             # Add a chart name for navigation
-            sales_to = '{:,.0f}'.format(grouped_df[i * 10])
-            sales_from = '{:,.0f}'.format(grouped_df[min((i + 1) * 10 - 1, count_products - 1)])
+            sales_to = '{:,.0f}'.format(products[0])
+            sales_from = '{:,.0f}'.format(products[-1])
             name_chart = f'Chart {i + 1}: Sales from {sales_from} to {sales_to}'
 
             plt.savefig(os.path.join('results/charts', f'{name_chart}.png'))
