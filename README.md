@@ -39,4 +39,4 @@ docker compose run --rm app python script_to_work_with_db.py
 
 While writing queries, I noticed a possible typo in the custmer_name field of the customers table.
 
-<img src="https://github.com/Keruiiia/test_task_idf/blob/dca9a1c34eab747ee1ee43a94a760a47885c2aa8/img.png" width=20% height=20%>
+<img src="https://github.com/Keruiiia/test_task_idf/blob/eb884a6ceefd2df8a8e7e48b71da2657f489510c/img_1.png" width=20% height=20%>
