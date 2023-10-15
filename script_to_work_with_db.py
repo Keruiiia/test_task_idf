@@ -75,6 +75,6 @@ for sql_file in sql_files:
             sales_from = '{:,.0f}'.format(products[-1])
             name_chart = f'Chart {i + 1}: Sales from {sales_from} to {sales_to}'
             plt.title(name_chart)
-            
+
             plt.savefig(os.path.join('results/charts', f'{name_chart}.png'))
 
